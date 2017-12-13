@@ -82,6 +82,5 @@ class Board
        return @name2
      end
    end
-
   end
 end
