@@ -50,7 +50,7 @@ class Play
   end
 
   def self.find_by_title(title)
-    result=PlayDBConnection.instance.execute(<<-SQL title)
+    result=PlayDBConnection.instance.execute(<<-SQL, title)
       SELECT
         *
       FROM
@@ -136,7 +136,7 @@ class playwrights
   end
 
   def get_plays
-    result= PlayDBConnection.instance.execute(<<-SQL @id)
+    result= PlayDBConnection.instance.execute(<<-SQL, @id)
       SELECT
         *
       FROM
@@ -146,8 +146,7 @@ class playwrights
     SQL
 
     result.map { |play| Play.new(play) }
-
   end
-
-
 end
+
+p Play.all
