@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     # your code here
     book=Book.new(book_params)
     if book.save
-      redirect_to books_path
+      redirect_to books_url
     else
       render json: 'Error'
     end

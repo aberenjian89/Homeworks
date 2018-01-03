@@ -1,0 +1,35 @@
+/* PHASE 2: Navigation */
+
+.header-nav{
+  border-right: 1px solid white;
+}
+
+.header-logo {
+  float: left;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  font-weight: bold;
+  margin-left: 188px;
+}
+
+.header-logo:hover {
+  background-color: black;
+}
+
+.header-list {
+  float: right;
+  padding-right: 190px;
+}
+
+.header-list > li {
+  float:left;
+  border-left: 1px solid white;
+}
+
+.header_list > li:last-child{
+  border-right: 1px solid white;
+}
+
+.header-list > li:hover {
+  background-color: black;
+}
