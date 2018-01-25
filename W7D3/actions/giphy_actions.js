@@ -3,10 +3,10 @@ export const RECEIVE_SEARCH_GIPHYS = 'RECEIVE_SEARCH_GIPHYS';
 export const REQUEST_SEARCH_GIPHYS = 'REQUEST_SEARCH_GIPHYS';
 
 export const receiveSearchGiphys = giphys => {
-
+    console.log("Hello");
   return{
       type: RECEIVE_SEARCH_GIPHYS,
-      giphys
+      giphys: giphys
   }
 };
 
@@ -14,7 +14,8 @@ export const receiveSearchGiphys = giphys => {
 export const fetchSearchGiphys = (SearchTerm) => {
   return (dispatch) =>{
       APIUtil.fetchSearchGiphys(SearchTerm)
-          .then(giphys => dispatch(receiveSearchGiphys(giphys.data)));
+          .then(
+               giphys => dispatch(receiveSearchGiphys(giphys.data))) ;
   }
 };
 
